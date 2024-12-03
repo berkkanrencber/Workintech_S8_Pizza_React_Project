@@ -100,7 +100,6 @@ function OrderForm() {
 
   return (
     <div>
-      {/* Başlık Bölümü */}
       <div className="order-header">
         <img src={Logo} alt="Teknolojik Yemekler" className="order-logo" />
         <p className="order-header-nav">
@@ -109,7 +108,6 @@ function OrderForm() {
         </p>
       </div>
 
-      {/* Sipariş Formu */}
       <div className="order-container">
         <h1 className="order-title">Position Absolute Acı Pizza</h1>
         <div className="order-price-and-rating">
@@ -218,7 +216,6 @@ function OrderForm() {
             </div>
           </div>
 
-          {/* İsim Alanı */}
           <div className="form-group">
             <label htmlFor="name">
               İsim <span className="required">*</span>
