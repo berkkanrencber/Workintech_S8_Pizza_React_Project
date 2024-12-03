@@ -1,0 +1,38 @@
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #ce2829;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.success-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.success-logo {
+  height: 30px;
+  margin: 2rem 2rem 0 2rem;
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.success-message p {
+  font-family: "Roboto Condensed", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+}

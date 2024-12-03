@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import './App.css'
+import "./App.css";
 import Home from "./pages/Home";
 import OrderForm from "./pages/OrderForm";
 import Success from "./pages/Success";
 
 function App() {
-
   return (
     <Router>
       <Routes>
@@ -17,4 +16,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
