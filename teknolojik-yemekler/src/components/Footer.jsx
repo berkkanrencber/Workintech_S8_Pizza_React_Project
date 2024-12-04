@@ -5,12 +5,12 @@ import PhoneIcon from "../assets/footer/icon-3.png";
 import FooterLogo from "../assets/footer/logo-footer.svg";
 import TwitterIcon from "../assets/footer/twitter.svg";
 
-import InstagramImage1 from "../assets/pictures/food-1.png";
-import InstagramImage2 from "../assets/pictures/food-2.png";
-import InstagramImage3 from "../assets/pictures/food-3.png";
-import InstagramImage4 from "../assets/pictures/food-1.png";
-import InstagramImage5 from "../assets/pictures/food-2.png";
-import InstagramImage6 from "../assets/pictures/food-3.png";
+import InstagramImage1 from "../assets/instagram/1.png";
+import InstagramImage2 from "../assets/instagram/2.png";
+import InstagramImage3 from "../assets/instagram/3.png";
+import InstagramImage4 from "../assets/instagram/4.png";
+import InstagramImage5 from "../assets/instagram/5.png";
+import InstagramImage6 from "../assets/instagram/6.png";
 
 function Footer() {
   return (

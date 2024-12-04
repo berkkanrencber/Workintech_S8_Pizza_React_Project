@@ -20,6 +20,7 @@ function Home() {
     <>
       <div className="container">
         <img src={Logo} alt="Teknolojik Yemekler Logo" className="logo" />
+        <p className="heading-tagline">fırsatı kaçırma</p>
         <h1 className="heading">KOD ACIKTIRIR</h1>
         <h2 className="heading">PİZZA, DOYURUR</h2>
         <Link to="/order">
@@ -61,7 +62,7 @@ function Home() {
             style={{ backgroundImage: `url(${Kart1})` }}
           >
             <div className="card-content">
-              <h2>Özel Lezzetus</h2>
+              <h2 className="large-card-heading">Özel Lezzetus</h2>
               <p>Position: Absolute Acı Burger</p>
               <button>SİPARİŞ VER</button>
             </div>

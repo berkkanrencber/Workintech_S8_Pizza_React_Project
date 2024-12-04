@@ -52,11 +52,17 @@
 .contact-item span {
   font-size: 0.9rem;
   line-height: 1.5;
+  font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .footer-section.hot-menu h3 {
   margin: 2rem 0;
   color: white;
+  font-family: "Barlow", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .hot-menu ul {
@@ -66,6 +72,9 @@
 .hot-menu ul li {
   font-size: 0.9rem;
   margin: 0.5rem 0;
+  font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .instagram-images {
@@ -83,6 +92,9 @@
 .footer-section.instagram h3 {
   margin: 2rem 0;
   color: white;
+  font-family: "Barlow", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .footer-bottom {
@@ -97,10 +109,13 @@
 
 .footer-bottom img {
   font-size: 0.8rem;
-  margin: 0;
-}
-
-.footer-bottom img {
   width: 20px;
   margin-left: 1rem;
 }
+
+.footer-bottom p{
+  font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

@@ -1,7 +1,7 @@
 .success-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   height: 100vh;
   background-color: #ce2829;
@@ -11,14 +11,39 @@
   box-sizing: border-box;
 }
 
+.success-body {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #ce2829;
+  color: white;
+  width: 100%;
+}
+
+.success-tagline {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fdd835;
+  text-transform: lowercase;
+  margin-bottom: 0.5rem;
+}
+
+.divider {
+  width: 30%;
+  height: 2px;
+  margin: 3rem auto 0 auto;
+  background-color: #ffffff;
+  opacity: 0.6;
+}
+
 .success-header {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .success-logo {
-  height: 30px;
+  height: 2.5rem;
   margin: 2rem 2rem 0 2rem;
 }
 
@@ -27,12 +52,109 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  background: #ce2829;
+  width: 100%;
+}
+
+.success-message h1 {
+  font-family: "Roboto Condensed", serif;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .success-message p {
-  font-family: "Roboto Condensed", serif;
-  font-weight: 300;
+  font-family: "Satisfy", serif;
+  font-weight: 400;
   font-style: normal;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.success-summary {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.success-summary-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+.success-summary-group p {
+  font-family: "Barlow", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+.success-summary-group strong {
+  font-weight: bold;
+  color: white;
+}
+
+.success-summary h1{
+  margin: 1rem 2rem 5rem 2rem;
+  font-size: 2rem;
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.price-summary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 5rem auto;
+}
+
+.price-summary h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.success-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: white;
+  font-family: "Barlow", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.success-summary-item.total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  .divider {
+    width: 100%;
+  }
+  
 }
