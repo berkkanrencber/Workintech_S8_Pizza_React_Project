@@ -18,6 +18,7 @@
 main{
   background: #FAF7F2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -38,7 +39,7 @@ main{
 }
 
 .order-header-nav {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   text-align: left;
   width: 100%;
@@ -62,7 +63,7 @@ main{
 .order-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
   color: #292929;
 }
 
@@ -74,7 +75,7 @@ main{
 }
 
 .order-price {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #292929;
   font-weight: bold;
 }
@@ -86,18 +87,19 @@ main{
 }
 
 .rating-value {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #5f5f5f;
 }
 
 .rating-count {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #5f5f5f;
 }
 
 .order-description {
   margin-bottom: 2rem;
   color: #5f5f5f;
+  font-size: 1.5rem;
 }
 
 .order-form {
@@ -125,6 +127,7 @@ main{
 .form-group p {
   font-weight: bold;
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .required {
@@ -143,8 +146,8 @@ main{
 
 .radio-option {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +167,7 @@ main{
 }
 
 .radio-option .radio-label {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #333;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -251,6 +254,7 @@ select:focus {
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .checkbox-label input {
@@ -272,6 +276,7 @@ select:focus {
   justify-content: center;
   width: 30px;
   height: 30px;
+  min-width: 30px;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #FAF7F2;
@@ -310,7 +315,7 @@ textarea {
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Roboto Condensed", serif;
   background-color: #faf7f2;
   color: #292929;
@@ -331,7 +336,7 @@ input[type="text"] {
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Roboto Condensed", serif;
   background-color: #faf7f2;
   color: #292929;
@@ -351,6 +356,11 @@ input[type="text"]::placeholder {
   font-style: italic;
 }
 
+
+.name-note label{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
 
 .quantity-and-summary {
@@ -398,7 +408,7 @@ input[type="text"]::placeholder {
   
 
   .order-summary h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
     color: #333;
@@ -409,7 +419,7 @@ input[type="text"]::placeholder {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #333;
   }
   
@@ -422,7 +432,7 @@ input[type="text"]::placeholder {
   padding: 1rem;
   background-color: #FDC913;
   color: #292929;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   border-radius: 4px;
@@ -439,7 +449,7 @@ label[for="name"] {
 
 .form-error {
   color: #ce2829;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   margin-top: 0.5rem;
   text-align: center;
 }
@@ -450,10 +460,12 @@ label[for="name"] {
 }
 
 @media screen and (max-width: 768px) {
+
   .order-container {
     width: 100%;
     padding: 2rem;
   }
+
   .order-header-nav {
     width: 100%;
     padding: 1rem 0;
@@ -481,21 +493,171 @@ label[for="name"] {
     width: 40px;
     height: 40px;
   }
+
+
+  .order-description {
+    font-size: 1rem;
+  }
+  
+  .order-header-nav {
+    font-size: 0.9rem;
+  }
+  
+  
+  .order-title {
+    font-size: 2rem;
+  }
+  
+  .order-price {
+    font-size: 1.5rem;
+  }
+  
+  
+  .rating-value {
+    font-size: 0.9rem;
+  }
+  
+  .rating-count {
+    font-size: 0.9rem;
+  }
+  
+  .form-group p {
+    font-size: 1rem;
+  }
+  
+  
+    .radio-option .radio-label {
+      font-size: 1rem;
+    }
+    
+    
+    select {
+      font-size: 1rem;
+    }
+    
+    .select-wrapper::after {
+      font-size: 0.8rem;
+    }
+    
+    
+    
+    .custom-checkbox::after {
+      font-size: 0.9rem;
+    }
+    
+    .helper-text {
+      font-size: 0.9rem;
+    }
+    
+    textarea {
+      font-size: 1rem;
+    }
+    
+    input[type="text"] {
+      font-size: 1rem;
+    }
+    
+    .quantity-group button {
+      font-size: 1.2rem;
+    }
+      
+    
+      .order-summary h3 {
+        font-size: 1.2rem;
+      }
+      
+    
+      .summary-item {
+        font-size: 1rem;
+      }
+    
+    .order-button {
+      font-size: 1.2rem;
+    }
+    
+    .form-error {
+      font-size: 0.9rem;
+    }
+    
+      .order-header-nav {
+        font-size: 0.9rem;
+      }
+      
+      .order-title {
+        font-size: 2rem;
+      }
+      
+      .order-price {
+        font-size: 1.5rem;
+      }
+      
+      .rating-value {
+        font-size: 0.9rem;
+      }
+      
+      .rating-count {
+        font-size: 0.9rem;
+      }
+      
+      .radio-option .radio-label {
+        font-size: 1rem;
+      }
+      
+      select {
+        font-size: 1rem;
+      }
+      
+      .select-wrapper::after {
+        font-size: 0.8rem;
+      }
+      
+      .custom-checkbox::after {
+        font-size: 0.9rem;
+      }
+
+      .checkbox-label{
+        font-size: 1rem;
+      }
+      
+      .helper-text {
+        font-size: 0.9rem;
+      }
+      
+      textarea {
+        font-size: 1rem;
+      }
+      
+      input[type="text"] {
+        font-size: 1rem;
+      }
+      
+      .name-note label{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      
+      .quantity-group button {
+        font-size: 1.2rem;
+      }
+    
+      .order-summary h3 {
+        font-size: 1.2rem;
+      }
+        
+      
+      .summary-item {
+        font-size: 1rem;
+      }
+      
+      .order-button {
+        font-size: 1.2rem;
+      }
+    
+      .form-error {
+        font-size: 0.9rem;
+      }
+    
+  
+
 }
 
-
-@media screen and (min-width: 769px) {
-    .quantity-and-summary {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-  
-    .quantity-group {
-      width: auto;
-    }
-  
-    .order-button {
-      width: 100%;
-      margin-top: 0;
-    }
-  }

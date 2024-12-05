@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background-color: #ce2829;
   color: white;
   text-align: center;
@@ -153,6 +153,44 @@
 
 
 @media screen and (max-width: 768px) {
+  .success-container {
+    padding: 1rem;
+  }
+
+  .success-summary {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .success-summary h1{
+    margin: 1rem 2rem 3rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .success-summary-group {
+    align-items: left;
+    text-align: start;
+    width: 100%;
+  }
+
+  .price-summary {
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+
+  .price-summary h2 {
+    text-align: start;
+    font-size: 1.3rem;
+  }
+
+  .success-summary-item {
+    flex-direction: row;
+    text-align: start;
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
   .divider {
     width: 100%;
   }

@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
 import "../styles/OrderForm.css";
-import Logo from "../assets/logo.svg";
-import FormBanner from "../assets/pictures/form-banner.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
+import "../styles/OrderForm.css";
+import Header from "../components/orderForm/Header";
+import OrderBanner from "../components/orderForm/OrderBanner";
+import SizeSelector from "../components/orderForm/SizeSelector";
+import CrustSelector from "../components/orderForm/CrustSelector";
+import ToppingsSelector from "../components/orderForm/ToppingsSelector";
+import UserDetail from "../components/orderForm/UserDetails";
+import QuantityChanger from "../components/orderForm/QuantityChanger";
+import OrderSummary from "../components/orderForm/OrderSummary";
 
 function OrderForm({ setSuccessFormData }) {
   const navigate = useNavigate();
@@ -125,158 +132,25 @@ function OrderForm({ setSuccessFormData }) {
   return (
     <>
       <div>
-        <header className="order-header">
-          <img src={Logo} alt="Teknolojik Yemekler" className="order-logo" />
-        </header>
-
+        <Header />
         <main>
-          <div className="order-banner">
-            <img
-              src={FormBanner}
-              alt="Teknolojik Yemekler"
-              className="order-logo"
-            />
-            <p className="order-header-nav">
-              Anasayfa - Seçenekler -{" "}
-              <span className="current-page">Sipariş Oluştur</span>
-            </p>
-            <h1 className="order-title">Position Absolute Acı Pizza</h1>
-            <div className="order-price-and-rating">
-              <p className="order-price">85.50₺</p>
-              <div className="order-rating">
-                <span className="rating-value">4.9</span>
-                <span className="rating-count">(200)</span>
-              </div>
-            </div>
-            <p className="order-description">
-              Frontend Dev olarak hala position: absolute kullanıyorsan bu çok
-              acı pizza tam sana göre. Pizza, domates, peynir ve genellikle
-              çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel olarak
-              odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle
-              yuvarlak düzleştirilmiş mayalı buğday bazlı hamurdan yapılan
-              İtalyan kökenli bir yemektir.
-            </p>
-          </div>
+          <OrderBanner />
         </main>
-
         <div className="order-container">
           <form onSubmit={handleSubmit} className="order-form">
             <div className="form-group-row">
-              <div className="form-group size-selector">
-                <p>
-                  Boyut Seç <span className="required">*</span>
-                </p>
-                <div className="radio-group">
-                  <label className="radio-option">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="S"
-                      onChange={handleChange}
-                      checked={formData.size === "S"}
-                    />
-                    <span className="radio-label">S</span>
-                  </label>
-                  <label className="radio-option">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="M"
-                      onChange={handleChange}
-                      checked={formData.size === "M"}
-                    />
-                    <span className="radio-label">M</span>
-                  </label>
-                  <label className="radio-option">
-                    <input
-                      type="radio"
-                      name="size"
-                      value="L"
-                      onChange={handleChange}
-                      checked={formData.size === "L"}
-                    />
-                    <span className="radio-label">L</span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="form-group crust-selector">
-                <p>
-                  Hamur Seç <span className="required">*</span>
-                </p>
-                <div className="select-wrapper">
-                  <select
-                    id="crust"
-                    name="crust"
-                    value={formData.crust}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="" disabled>
-                      --Hamur Kalınlığı Seç--
-                    </option>
-                    <option value="İnce">İnce</option>
-                    <option value="Kalın">Kalın</option>
-                  </select>
-                </div>
-              </div>
+              <SizeSelector size={formData.size} onChange={handleChange} />
+              <CrustSelector crust={formData.crust} onChange={handleChange} />
             </div>
 
-            <div className="form-group">
-              <p>Ek Malzemeler</p>
-              <p id="toppings-helper-text" className="helper-text">
-                En Fazla 10 Malzeme Seçebilirsiniz. 5₺
-              </p>
-              <div className="toppings-grid">
-                {[
-                  "Pepperoni",
-                  "Sosis",
-                  "Domates",
-                  "Mısır",
-                  "Sucuk",
-                  "Ananas",
-                  "Jalapeno",
-                  "Kabak",
-                  "Kanada Jambonu",
-                  "Tavuk Izgara",
-                  "Soğan",
-                  "Sarımsak",
-                ].map((topping) => (
-                  <label key={topping} className="checkbox-label">
-                    <input
-                      type="checkbox"
-                      name="toppings"
-                      value={topping}
-                      onChange={handleChange}
-                      checked={formData.toppings.includes(topping)}
-                    />
-                    <span
-                      className={`custom-checkbox ${
-                        formData.toppings.includes(topping) ? "checked" : ""
-                      }`}
-                    ></span>
-                    <span className="checkbox-text">{topping}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
+            <ToppingsSelector
+              toppings={formData.toppings}
+              onChange={handleChange}
+            />
 
-            <div className="form-group">
-              <label htmlFor="name">
-                İsim <span className="required">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Adınızı giriniz"
-                required
-              />
-            </div>
+            <UserDetail name={formData.name} onChange={handleChange} />
 
-            <div className="form-group">
+            <div className="form-group name-note">
               <label htmlFor="note">Sipariş Notu</label>
               <textarea
                 id="note"
@@ -286,51 +160,33 @@ function OrderForm({ setSuccessFormData }) {
                 placeholder="Siparişe eklemek istediğiniz bir not var mı?"
               />
             </div>
+
             <hr className="hr"></hr>
+
             <div className="quantity-and-summary">
-              <div className="quantity-group">
-                <button
-                  type="button"
-                  onClick={() => handleQuantityChange("decrement")}
-                >
-                  -
-                </button>
-                <span>{formData.quantity}</span>
-                <button
-                  type="button"
-                  onClick={() => handleQuantityChange("increment")}
-                >
-                  +
-                </button>
-              </div>
-
-              <div className="order-summary">
-                <h3>Sipariş Toplamı</h3>
-                <div className="summary-item">
-                  <span>Seçimler</span>
-                  <span>{formData.topping_price.toFixed(2)}₺</span>
-                </div>
-                <div className="summary-item total">
-                  <span>Toplam</span>
-                  <span>{formData.total_price.toFixed(2)}₺</span>
-                </div>
-              </div>
-
-              {formError && <p className="form-error">{formError}</p>}
-
-              <button
-                type="submit"
-                className="order-button"
-                disabled={isSubmitting}
-              >
-                Sipariş Ver
-              </button>
+              <QuantityChanger
+                quantity={formData.quantity}
+                onQuantityChange={handleQuantityChange}
+              />
+              <OrderSummary
+                toppingPrice={formData.topping_price}
+                totalPrice={formData.total_price}
+              />
             </div>
+
+            {formError && <p className="form-error">{formError}</p>}
+
+            <button
+              type="submit"
+              className="order-button"
+              disabled={isSubmitting}
+            >
+              Sipariş Ver
+            </button>
           </form>
         </div>
+        <Footer />
       </div>
-
-      <Footer></Footer>
     </>
   );
 }
